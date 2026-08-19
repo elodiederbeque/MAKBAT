@@ -1,4 +1,4 @@
-const header = document.querySelector("[data-header]");
+﻿const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const year = document.querySelector("[data-year]");
@@ -37,7 +37,7 @@ document.addEventListener("keydown", (event) => {
 });
 
 const revealTargets = document.querySelectorAll(
-  ".service-card, .timeline article, .project-tile, .trust-list li, .contact-form"
+  ".service-card, .timeline article, .gallery-item, .mdf-gallery figure, .trust-list li, .contact-form"
 );
 
 if ("IntersectionObserver" in window) {
@@ -78,3 +78,4 @@ contactForm.addEventListener("submit", (event) => {
   window.location.href = `mailto:papyrus43@hotmail.com?subject=${subject}&body=${body}`;
   formNote.textContent = "Votre application e-mail va s'ouvrir avec le message pre-rempli.";
 });
+
