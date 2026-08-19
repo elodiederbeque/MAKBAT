@@ -1,9 +1,23 @@
-﻿const header = document.querySelector("[data-header]");
+const header = document.querySelector("[data-header]");
 const nav = document.querySelector("[data-nav]");
 const navToggle = document.querySelector("[data-nav-toggle]");
 const year = document.querySelector("[data-year]");
 const contactForm = document.querySelector("[data-contact-form]");
 const formNote = document.querySelector("[data-form-note]");
+const heroMedia = document.querySelector(".hero-media");
+if (heroMedia) {
+  if (heroMedia.complete) {
+    heroMedia.classList.add("is-loaded");
+  } else {
+    heroMedia.addEventListener(
+      "load",
+      () => {
+        heroMedia.classList.add("is-loaded");
+      },
+      { once: true }
+    );
+  }
+}
 
 const setHeaderState = () => {
   header.classList.toggle("is-scrolled", window.scrollY > 16);
