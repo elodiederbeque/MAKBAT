@@ -8,6 +8,7 @@ Site premium statique pour MAKBAT SComm, entreprise belge de cuisines et renovat
 - `css/style.css` : design responsive et styles premium.
 - `js/script.js` : menu mobile, animations legeres et formulaire e-mail.
 - `assets/img/cuisine-makbat-hero.png` : visuel principal.
+- `assets/img/makbat-logo.png` : logo MAKBAT utilise dans l'en-tete.
 - `GUIDE_GITHUB_PAGES.md` : guide de mise en ligne et de mise a jour.
 
 ## Utilisation locale
