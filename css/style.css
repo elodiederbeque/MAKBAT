@@ -450,11 +450,13 @@ h3 {
 
 .timeline article {
   display: grid;
-  grid-template-columns: 64px 1fr;
-  gap: 1.2rem;
+  grid-template-columns: 64px minmax(240px, 1fr);
+  column-gap: 1.4rem;
+  row-gap: 0.45rem;
   min-height: 150px;
   padding: 1.25rem 0;
   border-top: 1px solid rgba(255, 255, 255, 0.18);
+  align-items: start;
 }
 
 .timeline span {
@@ -468,9 +470,20 @@ h3 {
   font-weight: 900;
 }
 
+.timeline h3,
+.timeline p {
+  grid-column: 2;
+}
+
+.timeline h3 {
+  margin: 0;
+}
+
 .timeline p {
   margin: 0;
+  max-width: 560px;
   color: rgba(255, 255, 255, 0.72);
+  line-height: 1.7;
 }
 
 .realisations {
@@ -482,10 +495,13 @@ h3 {
   grid-template-columns: repeat(4, minmax(0, 1fr));
   grid-auto-flow: dense;
   gap: 1rem;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .gallery-item {
   position: relative;
+  min-width: 0;
   min-height: 280px;
   margin: 0;
   overflow: hidden;
@@ -806,6 +822,12 @@ h3 {
 
   .timeline article {
     grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .timeline h3,
+  .timeline p {
+    grid-column: 1;
   }
 
   .contact-form {
@@ -923,3 +945,5 @@ h3 {
     min-height: 310px;
   }
 }
+
+
